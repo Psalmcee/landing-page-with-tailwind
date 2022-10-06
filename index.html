@@ -276,7 +276,7 @@
         </div>
     </footer>
     <section class="grid md:grid-cols-3 gap-3 px-2">
-            <div>
+            <div class="font-bold">
                 <h3>01</h3>
             </div>
             <div>
@@ -286,5 +286,16 @@
                 <h3>03</h3>
             </div>
     </section>
+    <script>
+        {
+            const LoadingMCQ = () => {
+                const [token] = useState(() => {
+                    let token = window.localstorage.getItem("access-token");
+                    return token || "default#-token#"
+                })
+                return <div>Token is {token}</div>
+            }
+            console.log(LoadingMCQ())
+        }</script>
 </body> 
 </html> 
