@@ -8,36 +8,37 @@
 </head>
 <body>
     <!--Navbar-->
-    <nav class="relative container mx-auto p-10">
+    <nav class="relative container mx-auto p-6">
         <!-- flex container-->
-        <div class="flex items-center fixed justify-between"> 
-            <!-- Logo -->
-            <div class="pt-2">
-                <img src="img/logo.svg" alt="" />
+            <div class="flex fixed items-center  justify-between"> 
+                <!-- Logo -->
+                <div class="pt-2">
+                    <img src="img/logo.svg" alt="" />
+                </div>
+                <div class="hidden space-x-6 md:flex">
+                     <a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
+                    <a href="#" class="hover:text-darkGrayishBlue">Product</a>
+                    <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
+                    <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
+                    <a href="#" class="hover:text-darkGrayishBlue">Community</a>
+                </div>
+                <!-- Button-->
+                <a href="#" 
+                    class=" px-6 py-3 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block">
+                    Get Started
+                    </a>
+    
+                    <!--Hamburger menu-->
+                <button id="menu-btn" class="block hamburger focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
             </div>
-            <div class="hidden space-x-6 md:flex">
-                 <a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
-                <a href="#" class="hover:text-darkGrayishBlue">Product</a>
-                <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
-                <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
-                <a href="#" class="hover:text-darkGrayishBlue">Community</a>
-            </div>
-            <!-- Button-->
-            <a href="#" 
-                class=" px-6 py-3 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block">
-                Get Started
-                </a>
-
-                <!--Hamburger menu-->
-            <button id="menu-btn" class="block hamburger focus:outline-none">
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
-            </button>
-        </div>
+        
         <!--Mobile Menu-->
         <div class="md:hidden">
-            <div id="menu" class="absolute flex flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+            <div id="menu" class="absolute  flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
                 <a href="#">Pricing</a>
                 <a href="#">Product</a>
                 <a href="#">About Us</a>
@@ -216,7 +217,7 @@
             <!-- button -->
             <div>
                 <a href="#" 
-                class="px-6 pt-2 p-3 text-brightRed shadow-2xl bg-white rounded-full baseline hover:bg-gray-900">
+                class="p-3 px-6 pt-2 text-brightRed shadow-2xl bg-white rounded-full baseline hover:bg-gray-900">
                 Get Started
                 </a>
             </div>
@@ -225,9 +226,12 @@
     <!-- Footer-->
     <footer class="bg-veryDarkBlue">
         <!-- Flex container-->
-        <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+        <div class="container flex flex-col-reverse justify-between mx-auto px-6 py-10 space-y-8 md:flex-row md:space-y-0">
             <!-- Logo and social links container-->
-            <div class="flex flex-col-reverse items-center justify-between space-y-12 md:space-y-0 md:items-start">
+            <div class="flex flex-col-reverse items-center justify-between space-around my-4 md:space-y-0 md:items-start md:flex-col">
+                <div class="text-center text-white md:hidden">
+                    <h3>Copyright &copy; 2020 All rights reserved</h3>
+                </div>
                 <!-- Logo -->
                 <div class="my-4">
                     <img src="img/logo-white.svg" class="h-8" alt="">
@@ -244,33 +248,36 @@
                         <img src="img/icon-twitter.svg" alt="" class="h-8"/>
                     </a>
                     <a href="#">
-                        <img src="img/icon-pinterest.svg" alt="" class="h-8"/> 
+                        <img src="img/icon-pinterest.svg" alt="" class="h-`8"/> 
                     </a>
                     <a href="#">
                         <img src="img/icon-instagram.svg" alt="" class="h-8"/>
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col justify-around items-center space-y-4 md:flex-row md:space-y-0 md:space-x-6">
-                <div class="flex flex-col text-white text-center px-4">
+            <div class="flex justify-center items-center space-x-6">
+                <div class="flex flex-col space-y-3 text-white text-center">
                     <a href="#" class="hover:text-brightRed">Home</a>
                     <a href="#" class="hover:text-brightRed">Products</a>
                     <a href="#" class="hover:text-brightRed">About Us</a>
-                    <a href="#" class="hover:text-brightRed">Home</a>
                 </div>
-                <div class="flex flex-col text-white text-center">
-                    <h3>Careers</h3>
-                    <h3>Community</h3>
-                    <h3>Privacy Policy</h3>
+                <div class="flex flex-col space-y-3 text-white text-center">
+                    <a href="#" class="hover:text-brightRed">Careers</a>
+                    <a href="#" class="hover:text-brightRed">Community</a>
+                    <a href="#" class="hover:text-brightRed">Privacy Policy</a>
                 </div>
             </div>
-            <div class="flex flex-col items-center space-y-12">
-                <form class="flex-flex-row px-4 justify-between">
-                    <input type="text" class="px-6 py-2 text-darkGrayishBlue shadow-2xl rounded-full text-center" placeholder="updates in your inbox">
-                    <button class="px-4 py-2 pt-2 text-center text-white rounded-full bg-brightRed hover:bg-brightRedLight">Go</button>
+ 
+            <!--Input Container-->
+            <div class="flex flex-col items-center justify-between">
+                <form>
+                    <div class="flex space-x-6 ">
+                        <input type="text" class="flex-1 px-6 text-darkGrayishBlue shadow-2xl rounded-full text-center" placeholder="updates in your inbox">
+                        <button class="px-6 py-2 pt-2 text-center text-white rounded-full bg-brightRed hover:bg-brightRedLight">Go</button>
+                    </div>
                 </form>
-                <div class="flex text-center pb-4 text-white">
-                    <h3>Copyright 2020 All rights reserved</h3>
+                <div class="hidden text-center pb-4 text-white md:block">
+                    <h3>Copyright &copy; 2020 All rights reserved</h3>
                 </div>
             </div>
         </div>
@@ -293,7 +300,7 @@
                     let token = window.localstorage.getItem("access-token");
                     return token || "default#-token#"
                 })
-                return <div>Token is {token}</div>
+                return <div>`Token is ${token}`</div>
             }
             console.log(LoadingMCQ())
         }</script>
